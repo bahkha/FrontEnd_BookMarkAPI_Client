@@ -4,7 +4,7 @@ const NavBar = () => (
   <header>
     <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <div className="container-fluid">
-        <a className="navbar-brand">Bookmarker</a>
+        <link className="navbar-brand">Bookmarker</link>
         <button
           className="navbar-toggler"
           type="button"
@@ -19,7 +19,9 @@ const NavBar = () => (
         <div className="collapse navbar-collapse" id="navbarCollapse">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <a className="nav-link">Add Bookmark</a>
+              <link href="/add" className="nav-link">
+                Add Bookmark
+              </link> 
             </li>
           </ul>
         </div>
