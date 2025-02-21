@@ -1,7 +1,8 @@
 import { BookmarksResponse } from "@/types"
 import axios from "axios"
 
-const API_BASE_URL = 'http://localhost:8080'
+//const API_BASE_URL = 'http://localhost:8080'
+const API_BASE_URL = process.env.NEXT_PUBLIC_SERVER_API_BASE_URL
 
 export async function getAllBookmarks(page: number, query: string): Promise<BookmarksResponse> {
     
@@ -17,6 +18,6 @@ export async function getAllBookmarks(page: number, query: string): Promise<Book
 }
 
 export async function saveBookmark(bookmark:{title: string, url: string}) {
-    const res = await axios.post(`${API_BASE_URL}/api/bookmarks`, bookmark)
+    const res = await axios.post(`/api/bookmarks`, bookmark)
     return res.data
 }
